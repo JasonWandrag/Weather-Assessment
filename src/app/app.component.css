@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background-color: #6496ff;
+    /* background-image: url(https://picsum.photos/g/900?random);
+    background-position: center;
+    background-size: cover; */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    min-height: 100vh;
+}
+
+.loading {
+  width: 70px;
+  height: 70px;
+  background: #ffff32;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+}
+.loading:after, .loading:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background: #fafafa;
+  display: block;
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  animation: cloud1 2.5s ease-in-out infinite alternate;
+  box-shadow: 20px -15px 0 #fafafa, 40px 10px 0 #fafafa, 55px -15px 0 #fafafa, 75px 0px 0 #fafafa;
+}
+.loading:before {
+  left: -80px;
+  top: 0;
+  animation-name: cloud2;
+}
+
+@keyframes cloud1 {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+@keyframes cloud2 {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -50px;
+  }
+}
